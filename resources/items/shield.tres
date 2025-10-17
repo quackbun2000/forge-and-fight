@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://2uq5knkfw76s"]
+
+[ext_resource type="Texture2D" uid="uid://c6p3xos08esqk" path="res://assets/2d/weapons/Khien.png" id="1_41qf6"]
+[ext_resource type="Script" uid="uid://c3e1jgs8cjvws" path="res://scripts/resource/item.gd" id="1_mwred"]
+
+[resource]
+script = ExtResource("1_mwred")
+item_image = ExtResource("1_41qf6")
+item_name = "Shield"
+metadata/_custom_type_script = "uid://c3e1jgs8cjvws"

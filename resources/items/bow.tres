@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://culn48wb3i532"]
+
+[ext_resource type="Script" uid="uid://c3e1jgs8cjvws" path="res://scripts/resource/item.gd" id="1_keg3j"]
+[ext_resource type="Texture2D" uid="uid://bkhhqk8phiej2" path="res://assets/2d/weapons/Cung.png" id="1_nbp8g"]
+
+[resource]
+script = ExtResource("1_keg3j")
+item_image = ExtResource("1_nbp8g")
+item_name = "Bow"
+metadata/_custom_type_script = "uid://c3e1jgs8cjvws"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0hs3eb8osqv2"]
+
+[ext_resource type="FontFile" uid="uid://bhgqd6nx5c4dv" path="res://assets/fonts/earth_spirit/Earth Spirit.otf" id="1_s4xi4"]
+
+[node name="PopupText" type="Label"]
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 1, 0.09133291, 1)
+theme_override_colors/font_outline_color = Color(0.35064948, 0.30215755, 0.30215755, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_s4xi4")
+theme_override_font_sizes/font_size = 40
+text = "+2"

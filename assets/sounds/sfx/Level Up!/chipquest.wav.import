@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwibn1sphg0an"
+path="res://.godot/imported/chipquest.wav-bb7f7d8058d0c4e5dafd8263d866e0d8.sample"
+
+[deps]
+
+source_file="res://assets/sounds/sfx/Level Up!/chipquest.wav"
+dest_files=["res://.godot/imported/chipquest.wav-bb7f7d8058d0c4e5dafd8263d866e0d8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

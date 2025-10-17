@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://cnxqi1u3lc62"]
+
+[ext_resource type="Texture2D" uid="uid://3gq75sgrykp5" path="res://assets/2d/ingredients/Bat.png" id="1_00575"]
+[ext_resource type="Script" uid="uid://df0i66lk25sle" path="res://scripts/resource/inventory.gd" id="1_ibj1y"]
+
+[resource]
+script = ExtResource("1_ibj1y")
+inventory_type = 4
+inventory_image = ExtResource("1_00575")
+metadata/_custom_type_script = "uid://df0i66lk25sle"

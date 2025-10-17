@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=4 format=3 uid="uid://fmyto6mundv8"]
+
+[ext_resource type="Script" uid="uid://bfyj8w052tbwy" path="res://scripts/resource/npc_resource.gd" id="1_p62cu"]
+[ext_resource type="Texture2D" uid="uid://o87gxo27ia8" path="res://assets/2d/NPCs/npcs/Zoro.png" id="1_r1y3j"]
+[ext_resource type="Resource" uid="uid://b0w36pc0gp4q4" path="res://resources/items/sword.tres" id="2_3xghp"]
+
+[resource]
+script = ExtResource("1_p62cu")
+npc_name = "knight"
+npc_image = ExtResource("1_r1y3j")
+npc_need = ExtResource("2_3xghp")
+metadata/_custom_type_script = "uid://bfyj8w052tbwy"

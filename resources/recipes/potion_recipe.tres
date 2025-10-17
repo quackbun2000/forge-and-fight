@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://digq1yybvkni4"]
+
+[ext_resource type="Script" uid="uid://df0i66lk25sle" path="res://scripts/resource/inventory.gd" id="1_7kbay"]
+[ext_resource type="Resource" uid="uid://cnxqi1u3lc62" path="res://resources/inventories/bowl.tres" id="2_7kbay"]
+[ext_resource type="Resource" uid="uid://c2i07aov7ygbv" path="res://resources/inventories/mushroom.tres" id="3_0cfpt"]
+[ext_resource type="Resource" uid="uid://dqyt6vg8n54op" path="res://resources/items/potion.tres" id="4_475hq"]
+[ext_resource type="Script" uid="uid://jmes1mtdsa0h" path="res://scripts/resource/recipe.gd" id="5_w8o0h"]
+
+[resource]
+script = ExtResource("5_w8o0h")
+ingredients = Array[ExtResource("1_7kbay")]([ExtResource("2_7kbay"), ExtResource("3_0cfpt")])
+results = ExtResource("4_475hq")
+metadata/_custom_type_script = "uid://jmes1mtdsa0h"

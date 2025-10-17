@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://ck1rii0mt6wac"]
+
+[ext_resource type="Script" uid="uid://df0i66lk25sle" path="res://scripts/resource/inventory.gd" id="1_gggvg"]
+[ext_resource type="Resource" uid="uid://bwf4vvd42dki7" path="res://resources/inventories/fork.tres" id="2_046ac"]
+[ext_resource type="Resource" uid="uid://b21oly4qb74d2" path="res://resources/inventories/broom.tres" id="3_gggvg"]
+[ext_resource type="Resource" uid="uid://culn48wb3i532" path="res://resources/items/bow.tres" id="4_046ac"]
+[ext_resource type="Script" uid="uid://jmes1mtdsa0h" path="res://scripts/resource/recipe.gd" id="5_5idbx"]
+
+[resource]
+script = ExtResource("5_5idbx")
+ingredients = Array[ExtResource("1_gggvg")]([ExtResource("2_046ac"), ExtResource("3_gggvg")])
+results = ExtResource("4_046ac")
+metadata/_custom_type_script = "uid://jmes1mtdsa0h"

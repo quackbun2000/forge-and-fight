@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://ipegohfvixmv"]
+
+[ext_resource type="Texture2D" uid="uid://cb7tbhpbk4k14" path="res://assets/2d/UI/main menu/main menu.png" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://cjt5u4qfdb8tf" path="res://scripts/ui/main_menu.gd" id="1_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dmh81mnq6671f" path="res://assets/2d/UI/main menu/play button.png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://eeki3ou53jb4" path="res://assets/2d/UI/main menu/how to play button.png" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://ij7xv25pbj14" path="res://assets/2d/UI/how to play menu/how to play menu.png" id="5_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://crtomnt62ggyp" path="res://assets/2d/UI/how to play menu/home button.png" id="6_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://dqq1okh0ljpub" path="res://assets/2d/UI/how to play menu/go to play button.png" id="7_5dd4i"]
+[ext_resource type="AudioStream" uid="uid://bhjspdpux6gna" path="res://assets/sounds/music/Main Menu.mp3" id="8_tbmy8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_oa1go")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_bqqt6")
+
+[node name="PlayButton" type="TextureButton" parent="Background"]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 295.0
+offset_right = 427.0
+offset_bottom = 382.0
+texture_normal = ExtResource("2_wu84c")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="HowToPlayButton" type="TextureButton" parent="Background"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 393.0
+offset_right = 430.0
+offset_bottom = 476.0
+texture_normal = ExtResource("3_8ln24")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="HowToPlayMenu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_tbmy8")
+
+[node name="HomeButton" type="TextureButton" parent="HowToPlayMenu"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 109.0
+offset_bottom = 99.0
+texture_normal = ExtResource("6_jk1qb")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="PlayButton" type="TextureButton" parent="HowToPlayMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -107.0
+offset_top = 16.0
+offset_right = -21.0
+offset_bottom = 101.0
+grow_horizontal = 0
+texture_normal = ExtResource("7_5dd4i")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tbmy8")
+autoplay = true
+
+[connection signal="pressed" from="Background/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Background/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="HowToPlayMenu/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="HowToPlayMenu/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://br3y01tefmges"]
+
+[ext_resource type="Texture2D" uid="uid://fwdh264l2jrc" path="res://assets/2d/weapons/DauLau.png" id="1_oupft"]
+[ext_resource type="Script" uid="uid://c3e1jgs8cjvws" path="res://scripts/resource/item.gd" id="1_u7mwf"]
+
+[resource]
+script = ExtResource("1_u7mwf")
+item_image = ExtResource("1_oupft")
+item_name = "Wrong Item"
+metadata/_custom_type_script = "uid://c3e1jgs8cjvws"

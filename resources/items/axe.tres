@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://du6s72d72376v"]
+
+[ext_resource type="Texture2D" uid="uid://c0axx8o305nb7" path="res://assets/2d/weapons/Riu.png" id="1_ih03p"]
+[ext_resource type="Script" uid="uid://c3e1jgs8cjvws" path="res://scripts/resource/item.gd" id="1_t485b"]
+
+[resource]
+script = ExtResource("1_t485b")
+item_image = ExtResource("1_ih03p")
+item_name = "Axe"
+metadata/_custom_type_script = "uid://c3e1jgs8cjvws"

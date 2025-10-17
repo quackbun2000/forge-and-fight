@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b0w36pc0gp4q4"]
+
+[ext_resource type="Script" uid="uid://c3e1jgs8cjvws" path="res://scripts/resource/item.gd" id="1_h0edt"]
+[ext_resource type="Texture2D" uid="uid://cwx3xtais02st" path="res://assets/2d/weapons/Kiem.png" id="1_otrck"]
+
+[resource]
+script = ExtResource("1_h0edt")
+item_image = ExtResource("1_otrck")
+item_name = "Sword"
+metadata/_custom_type_script = "uid://c3e1jgs8cjvws"

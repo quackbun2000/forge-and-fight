@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=3 uid="uid://qv6oyavb7s4y"]
+
+[ext_resource type="Script" uid="uid://cj7fyov6gxlye" path="res://scripts/crafting_system.gd" id="1_62kia"]
+[ext_resource type="Script" uid="uid://jmes1mtdsa0h" path="res://scripts/resource/recipe.gd" id="2_d4cfa"]
+[ext_resource type="Resource" uid="uid://cyof7igj0bn0i" path="res://resources/recipes/sword_recipe.tres" id="3_qo7dp"]
+[ext_resource type="Resource" uid="uid://d3r86e3j4ro1p" path="res://resources/recipes/axe_recipe.tres" id="4_yhoyn"]
+[ext_resource type="Resource" uid="uid://ck1rii0mt6wac" path="res://resources/recipes/bow_recipe.tres" id="5_h76js"]
+[ext_resource type="Resource" uid="uid://df8ggsu8fryvv" path="res://resources/recipes/wand_recipe.tres" id="6_1c47n"]
+[ext_resource type="Resource" uid="uid://digq1yybvkni4" path="res://resources/recipes/potion_recipe.tres" id="7_bijut"]
+[ext_resource type="Resource" uid="uid://df7chauvh76qa" path="res://resources/recipes/shield_recipe.tres" id="8_vn2cr"]
+
+[node name="CraftingSystem" type="Node"]
+script = ExtResource("1_62kia")
+recipes = Array[ExtResource("2_d4cfa")]([ExtResource("3_qo7dp"), ExtResource("4_yhoyn"), ExtResource("5_h76js"), ExtResource("6_1c47n"), ExtResource("7_bijut"), ExtResource("8_vn2cr")])

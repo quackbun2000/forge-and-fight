@@ -1,0 +1,839 @@
+[gd_scene load_steps=61 format=3 uid="uid://dveejtby8vsbj"]
+
+[ext_resource type="Script" uid="uid://cfrg2somrkbgq" path="res://scripts/forge/forge.gd" id="1_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://c0hs3eb8osqv2" path="res://scenes/prefabs/popup_text.tscn" id="2_02fa5"]
+[ext_resource type="Texture2D" uid="uid://bcqksfin3ohx2" path="res://assets/2d/new_forge_menu.png" id="2_5newe"]
+[ext_resource type="Resource" uid="uid://br3y01tefmges" path="res://resources/items/wrong_item.tres" id="2_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://bximspeco5dn3" path="res://icon.svg" id="2_lnu2h"]
+[ext_resource type="Script" uid="uid://bgx71d6lqgy3a" path="res://scripts/ui/forge_item_button.gd" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://hlcl3rxe0k2u" path="res://scripts/ui/choose_item_pop_up.gd" id="4_lbhrr"]
+[ext_resource type="Script" uid="uid://xgv1xuc8vktx" path="res://scripts/ui/item_button.gd" id="5_p57ef"]
+[ext_resource type="FontFile" uid="uid://bhgqd6nx5c4dv" path="res://assets/fonts/earth_spirit/Earth Spirit.otf" id="6_264po"]
+[ext_resource type="Resource" uid="uid://0yh31aiqdyp2" path="res://resources/inventories/none.tres" id="6_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://bwil3oaaik1ic" path="res://addons/kenney_particle_pack/star_04.png" id="7_1kice"]
+[ext_resource type="Resource" uid="uid://cnxqi1u3lc62" path="res://resources/inventories/bowl.tres" id="7_vtaks"]
+[ext_resource type="Texture2D" uid="uid://c47kgv6xoiace" path="res://assets/2d/UI/button 3.png" id="8_37s47"]
+[ext_resource type="Resource" uid="uid://bwf4vvd42dki7" path="res://resources/inventories/fork.tres" id="8_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://bmyrvu3t6o857" path="res://assets/2d/UI/button 2.png" id="9_bt5mj"]
+[ext_resource type="Resource" uid="uid://b21oly4qb74d2" path="res://resources/inventories/broom.tres" id="9_dinhu"]
+[ext_resource type="Texture2D" uid="uid://b40kd3k00oidb" path="res://assets/2d/UI/button 3 hover.png" id="9_e1j6l"]
+[ext_resource type="Resource" uid="uid://c2i07aov7ygbv" path="res://resources/inventories/mushroom.tres" id="10_kvuet"]
+[ext_resource type="Texture2D" uid="uid://dsjsvy4cvodwy" path="res://assets/2d/UI/button 2 hover.png" id="11_pl11u"]
+[ext_resource type="Texture2D" uid="uid://16ij28yu71i7" path="res://assets/2d/Environment.png" id="12_ca42v"]
+[ext_resource type="Texture2D" uid="uid://dfdgii2uhcg3m" path="res://assets/2d/shop 1.png" id="13_rysoc"]
+[ext_resource type="Texture2D" uid="uid://ukf6off5fxum" path="res://assets/2d/UI/buttons/money earned.png" id="13_twgab"]
+[ext_resource type="Texture2D" uid="uid://c6d81x7tlh5ri" path="res://assets/2d/UI/buttons/day and goal bar.png" id="14_02fa5"]
+[ext_resource type="Texture2D" uid="uid://3bnushc0mp0i" path="res://assets/2d/shop 2.png" id="14_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://c8jhd6oaq0mre" path="res://addons/kenney_particle_pack/smoke_04.png" id="15_264po"]
+[ext_resource type="AudioStream" uid="uid://cpihkyvrnmfse" path="res://assets/sounds/music/Fun_Adventure.ogg" id="16_ca42v"]
+[ext_resource type="Script" uid="uid://d121pr2grpduv" path="res://scripts/ui/in_game_ui.gd" id="16_m4url"]
+[ext_resource type="Texture2D" uid="uid://bbjfcrlbpt33x" path="res://assets/2d/UI/time display.png" id="17_8ool0"]
+[ext_resource type="AudioStream" uid="uid://dyc0a3gju8u4s" path="res://assets/sounds/sfx/forge_sfx.wav" id="17_rysoc"]
+[ext_resource type="Texture2D" uid="uid://crtomnt62ggyp" path="res://assets/2d/UI/how to play menu/home button.png" id="18_8ool0"]
+[ext_resource type="Script" uid="uid://3gec7w8xltt2" path="res://scripts/ui/game_over_ui.gd" id="19_05nbr"]
+[ext_resource type="Texture2D" uid="uid://dkfn4t6c2emdi" path="res://assets/2d/UI/recipe/book button.png" id="19_458eo"]
+[ext_resource type="Texture2D" uid="uid://dqq1okh0ljpub" path="res://assets/2d/UI/how to play menu/go to play button.png" id="19_pr1ej"]
+[ext_resource type="Texture2D" uid="uid://bjwoomq0jsg77" path="res://assets/2d/UI/buttons/cancel button.png" id="22_nepv3"]
+[ext_resource type="Script" uid="uid://dubg2ehp2i1w4" path="res://scripts/system/npc_system.gd" id="25_pl11u"]
+[ext_resource type="PackedScene" uid="uid://253flakdqs3l" path="res://scenes/prefabs/npc.tscn" id="26_v2yb1"]
+[ext_resource type="Script" uid="uid://bfyj8w052tbwy" path="res://scripts/resource/npc_resource.gd" id="26_wljb1"]
+[ext_resource type="Resource" uid="uid://8okkj1xxd2al" path="res://resources/npcs/alchemist.tres" id="27_v2yb1"]
+[ext_resource type="Resource" uid="uid://cbb8olhvawgnc" path="res://resources/npcs/archer.tres" id="28_js0lu"]
+[ext_resource type="Texture2D" uid="uid://d3ir1mhbt3j5w" path="res://assets/2d/UI/recipe/Recipe book.png" id="28_oaba0"]
+[ext_resource type="Resource" uid="uid://s1mrco8klb7a" path="res://resources/npcs/barbarian.tres" id="29_gxtfn"]
+[ext_resource type="Resource" uid="uid://fmyto6mundv8" path="res://resources/npcs/knight.tres" id="30_twgab"]
+[ext_resource type="Resource" uid="uid://5orxyi8smxbc" path="res://resources/npcs/paladin.tres" id="31_02fa5"]
+[ext_resource type="Resource" uid="uid://600xpr70rph2" path="res://resources/npcs/wizard.tres" id="32_nepv3"]
+[ext_resource type="AudioStream" uid="uid://0ucff3spj1t1" path="res://assets/sounds/sfx/Level Up!/glassbell.wav" id="34_0sl42"]
+[ext_resource type="Script" uid="uid://c5b8hsan4t0yo" path="res://scripts/system/lever_manager.gd" id="34_js0lu"]
+
+[sub_resource type="Curve" id="Curve_5newe"]
+_data = [Vector2(0.078431375, 0.9892385), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_37s47"]
+curve = SubResource("Curve_5newe")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bt5mj"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 95.079994
+initial_velocity_max = 762.77997
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+scale_max = 0.19999999
+color = Color(0.93333334, 0.8, 0.67058825, 1)
+emission_curve = SubResource("CurveTexture_37s47")
+
+[sub_resource type="Gradient" id="Gradient_264po"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1kice"]
+gradient = SubResource("Gradient_264po")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5newe"]
+texture = SubResource("GradientTexture1D_1kice")
+modulate_color = Color(0.24313726, 0.23921569, 0.019607844, 0.3647059)
+
+[sub_resource type="GDScript" id="GDScript_lnu2h"]
+script/source = "extends Button
+
+@onready var choose_item_pop_up: PopupPanel = $\"../..\"
+
+func _on_pressed() -> void:
+	choose_item_pop_up.hide()
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_458eo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Curve" id="Curve_ir15t"]
+_data = [Vector2(0.0039215684, 0.11640608), 0.0, -0.021763189, 0, 0, Vector2(0.6627452, 0.72019875), 0.0, 0.0, 0, 0, Vector2(1, 0.8679687), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ca42v"]
+curve = SubResource("Curve_ir15t")
+
+[sub_resource type="Curve" id="Curve_rysoc"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.7453122), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ssvqc"]
+curve = SubResource("Curve_rysoc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5newe"]
+particle_flag_disable_z = true
+angle_min = -195.79999
+angle_max = 161.30002
+spread = 0.0
+gravity = Vector3(0, -50, 0)
+scale_min = 0.19999999
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_ca42v")
+scale_over_velocity_curve = SubResource("CurveTexture_ssvqc")
+color = Color(0.81960785, 0.89411765, 0.89411765, 1)
+turbulence_noise_speed_random = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kice"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_rysoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ssvqc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Forge" type="Control" parent="CanvasLayer/MainUI" node_paths=PackedStringArray("forge_sfx", "forge_vfx", "item_popup", "npc_system", "earned_money_text", "goal_money_text", "day_text")]
+layout_mode = 1
+anchor_left = 0.54800004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.1599731
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_kvpfn")
+forge_sfx = NodePath("../../../Sound/ForgeSFX")
+forge_vfx = NodePath("ResultTexture/GPUParticles2D")
+popup_text_prefab = ExtResource("2_02fa5")
+item_popup = NodePath("../../../ChooseItemPopUp")
+wrong_item = ExtResource("2_e1j6l")
+npc_system = NodePath("../../../NPCSystem")
+earned_money_text = NodePath("HBoxContainer/EarnedMoney/Text")
+goal_money_text = NodePath("HBoxContainer/GoalMoney/VBoxContainer/GoalText")
+day_text = NodePath("HBoxContainer/GoalMoney/VBoxContainer/DayText")
+
+[node name="ForgeMenu" type="TextureRect" parent="CanvasLayer/MainUI/Forge"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.5
+offset_top = -331.0
+offset_right = 228.5
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5newe")
+
+[node name="ItemButton1" type="Button" parent="CanvasLayer/MainUI/Forge" node_paths=PackedStringArray("popup")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.50451
+offset_top = 82.0
+offset_right = -289.49548
+offset_bottom = -486.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_lnu2h")
+flat = true
+expand_icon = true
+script = ExtResource("3_lnu2h")
+default_item = ExtResource("6_u5sy4")
+popup = NodePath("../../../../ChooseItemPopUp")
+
+[node name="ItemButton2" type="Button" parent="CanvasLayer/MainUI/Forge" node_paths=PackedStringArray("popup")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 295.931
+offset_top = 83.0
+offset_right = -41.069
+offset_bottom = -487.0
+icon = ExtResource("2_lnu2h")
+flat = true
+expand_icon = true
+script = ExtResource("3_lnu2h")
+default_item = ExtResource("6_u5sy4")
+popup = NodePath("../../../../ChooseItemPopUp")
+
+[node name="ForgeButton" type="Button" parent="CanvasLayer/MainUI/Forge"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -117.0
+offset_right = 74.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 41
+text = "Forge"
+
+[node name="ResultTexture" type="TextureRect" parent="CanvasLayer/MainUI/Forge"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.78300005
+anchor_right = 0.5
+anchor_bottom = 0.78300005
+offset_left = -66.0
+offset_top = -199.76001
+offset_right = 84.0
+offset_bottom = -49.76001
+grow_horizontal = 2
+grow_vertical = 0
+expand_mode = 2
+stretch_mode = 5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer/MainUI/Forge/ResultTexture"]
+position = Vector2(62.5, 78)
+emitting = false
+amount = 16
+texture = ExtResource("7_1kice")
+lifetime = 0.6
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_bt5mj")
+
+[node name="ButtonContainer" type="HBoxContainer" parent="CanvasLayer/MainUI/Forge"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.76400006
+anchor_right = 0.94000006
+anchor_bottom = 0.84200007
+offset_left = 17.396996
+offset_top = -0.08001709
+offset_right = -29.78003
+offset_bottom = -0.24005127
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="DiscardButton" type="TextureButton" parent="CanvasLayer/MainUI/Forge/ButtonContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("8_37s47")
+texture_pressed = ExtResource("9_e1j6l")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="CanvasLayer/MainUI/Forge/ButtonContainer/DiscardButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 40
+text = "discard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SendButton" type="TextureButton" parent="CanvasLayer/MainUI/Forge/ButtonContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("9_bt5mj")
+texture_pressed = ExtResource("11_pl11u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="CanvasLayer/MainUI/Forge/ButtonContainer/SendButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 40
+text = "send"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainUI/Forge"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.5
+offset_top = -108.88501
+offset_right = 8.5
+offset_bottom = -33.244995
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="EarnedMoney" type="TextureRect" parent="CanvasLayer/MainUI/Forge/HBoxContainer"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+texture = ExtResource("13_twgab")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Text" type="Label" parent="CanvasLayer/MainUI/Forge/HBoxContainer/EarnedMoney"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 40
+text = "150"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoalMoney" type="TextureRect" parent="CanvasLayer/MainUI/Forge/HBoxContainer"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+texture = ExtResource("14_02fa5")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainUI/Forge/HBoxContainer/GoalMoney"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -5
+
+[node name="DayText" type="Label" parent="CanvasLayer/MainUI/Forge/HBoxContainer/GoalMoney/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 23
+text = "Day: 1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GoalText" type="Label" parent="CanvasLayer/MainUI/Forge/HBoxContainer/GoalMoney/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "100"
+horizontal_alignment = 1
+
+[node name="InGame" type="Control" parent="CanvasLayer/MainUI" node_paths=PackedStringArray("recipe_popup")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("16_m4url")
+recipe_popup = NodePath("../../../RecipePopup")
+
+[node name="Timer" type="TextureRect" parent="CanvasLayer/MainUI/InGame"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 24.0
+offset_right = 373.0
+offset_bottom = 111.0
+texture = ExtResource("17_8ool0")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_group_ = true
+
+[node name="TimerText" type="Label" parent="CanvasLayer/MainUI/InGame/Timer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 40
+text = "60.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HomeButton" type="TextureButton" parent="CanvasLayer/MainUI/InGame"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 23.0
+offset_right = 92.0
+offset_bottom = 110.0
+texture_normal = ExtResource("18_8ool0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RecipeBookButton" type="TextureButton" parent="CanvasLayer/MainUI/InGame"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 139.0
+offset_right = 95.0
+offset_bottom = 229.0
+texture_normal = ExtResource("19_458eo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GameOverPopUp" type="Control" parent="CanvasLayer/MainUI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_05nbr")
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/MainUI/GameOverPopUp"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.5
+offset_top = -209.0
+offset_right = 306.5
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46666667, 0.3019608, 0.16078432, 0.75686276)
+
+[node name="GameOverText" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainUI/GameOverPopUp/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 88.66501
+offset_right = 205.48999
+offset_bottom = 189.35004
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="HomeButton" type="TextureButton" parent="CanvasLayer/MainUI/GameOverPopUp/Background/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("18_8ool0")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ReplayButton" type="TextureButton" parent="CanvasLayer/MainUI/GameOverPopUp/Background/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("19_pr1ej")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MainUI/GameOverPopUp/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.675
+offset_top = -76.0
+offset_right = 133.32501
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 139
+columns = 2
+
+[node name="DayTitle" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "Day"
+horizontal_alignment = 2
+
+[node name="DayText" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="HighestDayTitle" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "Highest Day"
+horizontal_alignment = 2
+
+[node name="HighestDayText" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="EarnedTitle" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "Earned"
+horizontal_alignment = 2
+
+[node name="EarnedText" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="HighestEarnedTitle" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "Highest Earned"
+horizontal_alignment = 2
+
+[node name="HighestEarnedText" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 35
+text = "1"
+
+[node name="DayHighscoreBox" type="ColorRect" parent="CanvasLayer/MainUI/GameOverPopUp/Background"]
+visible = false
+layout_mode = 0
+offset_left = 448.5
+offset_top = 173.0
+offset_right = 591.5
+offset_bottom = 205.0
+color = Color(1, 0.8627451, 0, 0.7411765)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/DayHighscoreBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 20
+text = "NEW HIGH SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoneyHighscoreBox" type="ColorRect" parent="CanvasLayer/MainUI/GameOverPopUp/Background"]
+visible = false
+layout_mode = 0
+offset_left = 452.5
+offset_top = 256.0
+offset_right = 595.5
+offset_bottom = 288.0
+color = Color(1, 0.8627451, 0, 0.7411765)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/MainUI/GameOverPopUp/Background/MoneyHighscoreBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_264po")
+theme_override_font_sizes/font_size = 20
+text = "NEW HIGH SCORE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChooseItemPopUp" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(695, 220)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5newe")
+script = ExtResource("4_lbhrr")
+
+[node name="ChooseItemPopUp" type="Control" parent="ChooseItemPopUp"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 695.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="HBoxContainer" parent="ChooseItemPopUp/ChooseItemPopUp"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp/GridContainer" node_paths=PackedStringArray("popup")]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+icon = ExtResource("2_lnu2h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_p57ef")
+inventory = ExtResource("6_u5sy4")
+popup = NodePath("../../..")
+
+[node name="Button2" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp/GridContainer" node_paths=PackedStringArray("popup")]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+icon = ExtResource("2_lnu2h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_p57ef")
+inventory = ExtResource("7_vtaks")
+popup = NodePath("../../..")
+
+[node name="Button3" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp/GridContainer" node_paths=PackedStringArray("popup")]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+icon = ExtResource("2_lnu2h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_p57ef")
+inventory = ExtResource("8_kvpfn")
+popup = NodePath("../../..")
+
+[node name="Button4" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp/GridContainer" node_paths=PackedStringArray("popup")]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+icon = ExtResource("2_lnu2h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_p57ef")
+inventory = ExtResource("9_dinhu")
+popup = NodePath("../../..")
+
+[node name="Button5" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp/GridContainer" node_paths=PackedStringArray("popup")]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+icon = ExtResource("2_lnu2h")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_p57ef")
+inventory = ExtResource("10_kvuet")
+popup = NodePath("../../..")
+
+[node name="CloseButton" type="Button" parent="ChooseItemPopUp/ChooseItemPopUp"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_bottom = 55.0
+grow_horizontal = 0
+icon = ExtResource("22_nepv3")
+flat = true
+expand_icon = true
+script = SubResource("GDScript_lnu2h")
+
+[node name="RecipePopup" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(600, 600)
+theme_override_styles/panel = SubResource("StyleBoxFlat_458eo")
+
+[node name="Control" type="Control" parent="RecipePopup"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 600.0
+offset_bottom = 600.0
+
+[node name="RecipeBook" type="TextureRect" parent="RecipePopup/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_oaba0")
+expand_mode = 1
+
+[node name="CloseButton" type="TextureButton" parent="RecipePopup/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("22_nepv3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Environment" type="Sprite2D" parent="World"]
+texture = ExtResource("12_ca42v")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Particle" type="Node2D" parent="World"]
+position = Vector2(475, 117)
+
+[node name="SmokeParticle" type="GPUParticles2D" parent="World/Particle"]
+position = Vector2(0, 52)
+amount = 16
+texture = ExtResource("15_264po")
+lifetime = 5.33
+randomness = 0.19
+process_material = SubResource("ParticleProcessMaterial_5newe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="World"]
+sprite_frames = SubResource("SpriteFrames_1kice")
+autoplay = "default"
+frame_progress = 0.8041545
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("16_ca42v")
+autoplay = true
+
+[node name="ForgeSFX" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("17_rysoc")
+volume_db = 10.0
+
+[node name="LevelUpSFX" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("34_0sl42")
+volume_db = 2.38
+
+[node name="NPCSystem" type="Node" parent="." node_paths=PackedStringArray("timer", "start_pos", "end_pos")]
+script = ExtResource("25_pl11u")
+npc_prefab = ExtResource("26_v2yb1")
+npc_list = Array[ExtResource("26_wljb1")]([ExtResource("27_v2yb1"), ExtResource("28_js0lu"), ExtResource("29_gxtfn"), ExtResource("30_twgab"), ExtResource("31_02fa5"), ExtResource("32_nepv3")])
+timer = NodePath("Timer")
+start_pos = NodePath("NPCSpawnPoint")
+end_pos = NodePath("NPCEndPoint")
+
+[node name="NPCSpawnPoint" type="Marker2D" parent="NPCSystem"]
+position = Vector2(411, 836)
+
+[node name="NPCEndPoint" type="Marker2D" parent="NPCSystem"]
+position = Vector2(405, 645)
+
+[node name="Timer" type="Timer" parent="NPCSystem"]
+one_shot = true
+autostart = true
+
+[node name="LevelManager" type="Node" parent="." node_paths=PackedStringArray("level_timer", "level_up_sfx")]
+script = ExtResource("34_js0lu")
+level_timer = NodePath("Timer")
+level_up_sfx = NodePath("../Sound/LevelUpSFX")
+
+[node name="Timer" type="Timer" parent="LevelManager"]
+process_mode = 1
+wait_time = 60.0
+autostart = true
+
+[connection signal="item_changed" from="CanvasLayer/MainUI/Forge/ItemButton1" to="CanvasLayer/MainUI/Forge" method="_on_item_changed"]
+[connection signal="item_changed" from="CanvasLayer/MainUI/Forge/ItemButton2" to="CanvasLayer/MainUI/Forge" method="_on_item_changed"]
+[connection signal="pressed" from="CanvasLayer/MainUI/Forge/ForgeButton" to="CanvasLayer/MainUI/Forge" method="forge"]
+[connection signal="pressed" from="CanvasLayer/MainUI/Forge/ButtonContainer/DiscardButton" to="CanvasLayer/MainUI/Forge" method="discard_item"]
+[connection signal="pressed" from="CanvasLayer/MainUI/Forge/ButtonContainer/SendButton" to="CanvasLayer/MainUI/Forge" method="send_item"]
+[connection signal="pressed" from="CanvasLayer/MainUI/InGame/HomeButton" to="CanvasLayer/MainUI/InGame" method="_on_home_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainUI/InGame/RecipeBookButton" to="CanvasLayer/MainUI/InGame" method="_on_recipe_book_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainUI/GameOverPopUp/Background/HBoxContainer/HomeButton" to="CanvasLayer/MainUI/GameOverPopUp" method="_on_home_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainUI/GameOverPopUp/Background/HBoxContainer/ReplayButton" to="CanvasLayer/MainUI/GameOverPopUp" method="_on_replay_button_pressed"]
+[connection signal="change_item" from="ChooseItemPopUp/ChooseItemPopUp/GridContainer/Button" to="ChooseItemPopUp" method="_on_button_change_item"]
+[connection signal="change_item" from="ChooseItemPopUp/ChooseItemPopUp/GridContainer/Button2" to="ChooseItemPopUp" method="_on_button_change_item"]
+[connection signal="change_item" from="ChooseItemPopUp/ChooseItemPopUp/GridContainer/Button3" to="ChooseItemPopUp" method="_on_button_change_item"]
+[connection signal="change_item" from="ChooseItemPopUp/ChooseItemPopUp/GridContainer/Button4" to="ChooseItemPopUp" method="_on_button_change_item"]
+[connection signal="change_item" from="ChooseItemPopUp/ChooseItemPopUp/GridContainer/Button5" to="ChooseItemPopUp" method="_on_button_change_item"]
+[connection signal="pressed" from="ChooseItemPopUp/ChooseItemPopUp/CloseButton" to="ChooseItemPopUp/ChooseItemPopUp/CloseButton" method="_on_pressed"]
+[connection signal="pressed" from="RecipePopup/Control/CloseButton" to="CanvasLayer/MainUI/InGame" method="_on_close_button_pressed"]
+[connection signal="timeout" from="NPCSystem/Timer" to="NPCSystem" method="_on_timer_timeout"]
+[connection signal="money_decrease" from="LevelManager" to="CanvasLayer/MainUI/Forge" method="_on_money_decrease"]
+[connection signal="money_increase" from="LevelManager" to="CanvasLayer/MainUI/Forge" method="_on_money_increase"]
+[connection signal="next_level" from="LevelManager" to="CanvasLayer/MainUI/Forge" method="_on_next_level"]
+[connection signal="state_change" from="LevelManager" to="CanvasLayer/MainUI/Forge" method="_on_level_manager_state_change"]
+[connection signal="state_change" from="LevelManager" to="CanvasLayer/MainUI/InGame" method="_on_level_manager_state_change"]
+[connection signal="state_change" from="LevelManager" to="CanvasLayer/MainUI/GameOverPopUp" method="_on_level_manager_state_change"]
+[connection signal="timeout" from="LevelManager/Timer" to="LevelManager" method="_on_timer_timeout"]

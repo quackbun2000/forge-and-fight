@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://253flakdqs3l"]
+
+[ext_resource type="Texture2D" uid="uid://bximspeco5dn3" path="res://icon.svg" id="1_8hmuv"]
+[ext_resource type="Script" uid="uid://mftw8kk6aab2" path="res://scripts/npc_controller.gd" id="2_55w0s"]
+[ext_resource type="Texture2D" uid="uid://cetoq7be40ecg" path="res://assets/2d/NPCs/bubble.png" id="3_0iwxw"]
+[ext_resource type="Texture2D" uid="uid://cwx3xtais02st" path="res://assets/2d/weapons/Kiem.png" id="4_ahbp2"]
+
+[node name="Npc" type="Sprite2D" node_paths=PackedStringArray("requirement_sprite", "bubble")]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_8hmuv")
+script = ExtResource("2_55w0s")
+requirement_sprite = NodePath("Bubble/Requirement")
+bubble = NodePath("Bubble")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-291.00003, -77)
+rotation = -0.5634279
+texture = ExtResource("3_0iwxw")
+flip_h = true
+
+[node name="Requirement" type="Sprite2D" parent="Bubble"]
+position = Vector2(-9.768667, 2.1343384)
+rotation = 0.58673275
+scale = Vector2(0.5879293, 0.5879293)
+texture = ExtResource("4_ahbp2")

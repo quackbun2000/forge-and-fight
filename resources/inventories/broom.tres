@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://b21oly4qb74d2"]
+
+[ext_resource type="Texture2D" uid="uid://ctto6e01583f7" path="res://assets/2d/ingredients/Choi.png" id="1_freyw"]
+[ext_resource type="Script" uid="uid://df0i66lk25sle" path="res://scripts/resource/inventory.gd" id="2_freyw"]
+
+[resource]
+script = ExtResource("2_freyw")
+inventory_type = 1
+inventory_image = ExtResource("1_freyw")
+metadata/_custom_type_script = "uid://df0i66lk25sle"
